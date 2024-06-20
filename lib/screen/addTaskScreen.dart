@@ -8,6 +8,7 @@ class Addtaskscreen extends StatelessWidget {
     return Container(
       color: Color(0xff757575),
       child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 20),
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
@@ -15,6 +16,7 @@ class Addtaskscreen extends StatelessWidget {
               topRight: Radius.circular(20),
             )),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
               textAlign: TextAlign.center,
@@ -24,7 +26,19 @@ class Addtaskscreen extends StatelessWidget {
             TextField(
               autofocus: true,
             ),
-            InkWell(onTap: () {}, child: Container(child: Text('Add')))
+            SizedBox(
+              height: 10,
+            ),
+            InkWell(
+                onTap: () {},
+                child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                    decoration: BoxDecoration(color: Colors.lightBlueAccent),
+                    child: Text(
+                      textAlign: TextAlign.center,
+                      'Add',
+                      style: TextStyle(color: Colors.white),
+                    )))
           ],
         ),
       ),
